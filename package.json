@@ -1,0 +1,21 @@
+{
+  "name": "contact-gateway",
+  "version": "0.0.0",
+  "description": "Description for ContactGateway",
+  "private": true,
+  "license": "UNLICENSED",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "devDependencies": {
+    "generator-jhipster": "6.7.1",
+    "@openapitools/openapi-generator-cli": "1.0.10-4.2.3"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "openapi-client:apidocs": "openapi-generator generate -g spring -i http://localhost:8082/v2/api-docs -p library=spring-cloud -p supportingFiles=ApiKeyRequestInterceptor.java -p apiPackage=com.illud.client.apidocs.api -p modelPackage=com.illud.client.apidocs.model -p basePackage=com.illud.client -p configPackage=com.illud.client.apidocs -p title=apidocs -p artifactId=apidocs --skip-validate-spec",
+    "openapi-client:sas": "openapi-generator generate -g spring -i http://localhost:8082/v2/api-docs -p library=spring-cloud -p supportingFiles=ApiKeyRequestInterceptor.java -p apiPackage=com.illud.client.sas.api -p modelPackage=com.illud.client.sas.model -p basePackage=com.illud.client -p configPackage=com.illud.client.sas -p title=sas -p artifactId=sas --skip-validate-spec"
+  }
+}
